@@ -12,7 +12,7 @@ license=('GPL' 'LGPL' 'custom')
 depends=('sh' 'libiconv' 'gettext')
 makedepends=('libiconv-devel' 'gettext-devel')
 options=('staticlibs')
-source=("git+http://tukaani.org/xz.git"
+source=("git+http://git.tukaani.org/xz.git"
         xz-5.0.5-msys2.patch)
 sha256sums=('SKIP'
             '3d800a027f7f43b5553f3ad937f4fb31872c6cf0995b419922b5ea63316c1602')
