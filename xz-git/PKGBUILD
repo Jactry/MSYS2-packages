@@ -50,6 +50,8 @@ check() {
 package_xz-git() {
   groups=('compression')
   depends=('libiconv' 'libintl')
+  provides=('xz')
+  conflicts=('xz')
 
   mkdir -p ${pkgdir}/usr/bin
   cp -rf ${srcdir}/dest/usr/bin ${pkgdir}/usr/
@@ -64,6 +66,8 @@ package_xz-git() {
 package_liblzma-git() {
   pkgdesc="Library for XZ and LZMA compressed files"
   groups=('libraries')
+  provides=('liblzma')
+  conflicts=('liblzma')
 
   mkdir -p ${pkgdir}/usr/bin
   cp -f ${srcdir}/dest/usr/bin/*.dll ${pkgdir}/usr/bin/
@@ -73,6 +77,9 @@ package_liblzma-devel-git() {
   pkgdesc="Liblzma headers and libraries"
   groups=('development')
   depends=("liblzma=${pkgver}" 'libiconv-devel' 'gettext-devel')
+  provides=('liblzma-devel')
+  conflicts=('liblzma-devel')
+
   mkdir -p ${pkgdir}/usr
   cp -rf ${srcdir}/dest/usr/include ${pkgdir}/usr/
   cp -rf ${srcdir}/dest/usr/lib ${pkgdir}/usr/
